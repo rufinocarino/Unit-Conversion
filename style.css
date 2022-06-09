@@ -4,40 +4,97 @@
     box-sizing: border-box;
 }
 
-
 .conversion {
-    background: linear-gradient(246.26deg, #585DFE 0%, #FB3796 100%);
-    height: 350px;
-    padding: 0em 1rem;
-    
+    background-color: white;
+    width: 100%;  
+    text-align: center;
 }
 
-
+.display-area {
+    height: 450;
+    background: linear-gradient(246.26deg, #585dfe 0%, #fb3796 100%);
+}
 .display-area h1 {
-    color: white;
+    color: #ffffff;
     font-size: 40px;
     text-align: center;
-    padding-top: 140px;
+    padding-top: 70px;
     padding-bottom: 30px;
 }
 
-display-area input {
-    border-style: hidden;
-    outline: none;
-    background: none;
-    text-align: center;
-    display: block;
+.display-area input {
+text-align: center;
+margin-bottom: 10px;
+height: 200px;
+width: 300px;
+outline: none;
+border-style: hidden;
+background: transparent;
+font-size: 100px;
+font-weight: 800;
+color: #ffffff;
+}
+
+.display-area input::placeholder {
+    color: aliceblue;
+    opacity: 0.3;
 }
 
 .metrics {
-    border: blue 3px solid;
     height: 500px;
     background: #c0bfbc;
+    text-align: center;
 }
 
-.measurement { 
+
+
+.measurement--type { 
     padding-top: 50px;
     padding-bottom: 27px;
+    padding: 50px 20px 27px;
     text-align: center;
+}
 
+.measurement--type p {
+    padding-top: 3px;
+    font-size: 14px;
+    text-align: center;
+    color: #4e4e4e;
+    font-weight: 500;
+}
+
+@media(min-width: 520px) {
+    .measurement--type h3 {
+        font-size: 30px;
+    }
+    .measurement--type p {
+        font-size: 20px;
+    }
+}
+
+@media(min-width: 992px) {
+    .metrics {
+        display: flex;
+        align-items: center;
+    }
+    .meter {
+        display: block;
+    }
+    .measurement--type p {
+        justify-content: center;
+    }
+}
+
+@media(min-width: 1020px){
+    .meters {
+        display: inline-flex;
+    }
+   
+    .metrics {
+        display: flex;
+        justify-content: space-around;
+        height: 600px;
+    }
+
+    
 }
